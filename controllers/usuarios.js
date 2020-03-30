@@ -55,7 +55,7 @@ ctrls.crearUserConditions = async (req, res) => {
 
 ctrls.getUserConditions = async (req, res) => {
      try {
-          const userConditions = await UserConditions.find({});
+          const userConditions = await UserConditions.find();
           res.json(userConditions);
      } catch (error) {
           console.log(error)
