@@ -1,4 +1,5 @@
 module.exports = {
-     UserConditions: require('./userConditions')
+  UserConditions: require('./userConditions'),
+  UserData: require('./userData')
 }
 
