@@ -9,9 +9,9 @@ module.exports = app => {
 
   app.use(morgan('dev'));
   app.use(bodyParse.json());
-  app.use(bodyParse.urlencoded({ extended: true }))
+  app.use(bodyParse.urlencoded({ extended: true }));
 
-  app.use(cors())
+  app.use(cors());
   routes(app);
   return app;
 

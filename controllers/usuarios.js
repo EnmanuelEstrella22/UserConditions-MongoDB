@@ -57,7 +57,7 @@ ctrls.getUserConditions = async (req, res) => {
     const userConditions = await UserConditions.find();
     res.json(userConditions);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 };
 
@@ -85,7 +85,7 @@ ctrls.crearUserData = async (req, res) => {
       emergencyContactPhone,
       height,
       weight
-    })
+    });
 
     await user_data.save();
     res.json({ mensaje: 'Se registro correctamente.'});
@@ -100,7 +100,7 @@ ctrls.getUserData = async (req, res) => {
     const userData = await UserData.find();
     res.json(userData);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 };
 

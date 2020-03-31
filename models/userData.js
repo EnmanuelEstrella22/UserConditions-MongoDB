@@ -10,6 +10,6 @@ const userData = new Schema({
   emergencyContactPhone: { type: String, required: true },
   height: { type: String, required: true },
   weight: { type: String, required: true }
-}, { collection: 'userData' })
+}, { collection: 'userData' });
 
 module.exports = model('userData', userData);
