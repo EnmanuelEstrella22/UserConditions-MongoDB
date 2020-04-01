@@ -1,10 +1,16 @@
 const express = require('express');
 const router = express.Router();
 
-const user = require('./../controllers/usuarios');
+const { ctrUserCondition, ctrUserData } = require('./../controllers');
 
 module.exports = app => {
-     router.post('/api/post/UserConditions', user.crearUserConditions);
-     router.get('/api/get/UserConditions', user.getUserConditions);
-     app.use(router);
-}
+  //User Conditions
+  router.post('/api/post/UserConditions', ctrUserCondition.crearUserConditions);
+  router.get('/api/get/UserConditions', ctrUserCondition.getUserConditions);
+
+  //User general data
+  router.post('/api/post/user_data', ctrUserData.crearUserData);
+  router.get('/api/get/user_data', ctrUserData.getUserData);
+
+  app.use(router);
+};
