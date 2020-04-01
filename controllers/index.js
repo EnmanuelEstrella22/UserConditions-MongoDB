@@ -1,4 +1,4 @@
 module.exports = {
-    ctrUserData: require('./userdata'),
-    ctrUserCondition: require('./usuarios')
-}
+  ctrUserData: require('./userdata'),
+  ctrUserCondition: require('./usuarios')
+};

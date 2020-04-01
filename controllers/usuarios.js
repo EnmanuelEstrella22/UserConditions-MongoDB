@@ -1,10 +1,11 @@
 const { UserConditions } = require('../models/index');
-let ctrls = {}
+let ctrls = {};
 
 //User Conditions
 ctrls.crearUserConditions = async (req, res) => {
   try {
-    const { allergic,
+    const {
+      allergic,
       otherAllergic,
       medication,
       surgery,
@@ -21,7 +22,8 @@ ctrls.crearUserConditions = async (req, res) => {
       allergicText,
       otherAllergicText,
       medicationText,
-      surgeryText } = req.body;
+      surgeryText,
+    } = req.body;
 
     console.log(req.body);
     const user = new UserConditions({
@@ -42,7 +44,7 @@ ctrls.crearUserConditions = async (req, res) => {
       allergicText,
       otherAllergicText,
       medicationText,
-      surgeryText
+      surgeryText,
     });
 
     await user.save();
