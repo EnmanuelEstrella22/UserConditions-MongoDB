@@ -21,6 +21,7 @@ const userConditions = new Schema(
     otherAllergicText: { type: String, required: false },
     medicationText: { type: String, required: false },
     surgeryText: { type: String, required: false },
+    name: { type: String, required: true }
   },
   { collection: 'userConditions' },
 );

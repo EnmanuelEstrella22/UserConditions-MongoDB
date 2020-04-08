@@ -23,6 +23,7 @@ ctrls.crearUserConditions = async (req, res) => {
       otherAllergicText,
       medicationText,
       surgeryText,
+      name
     } = req.body;
 
     console.log(req.body);
@@ -45,21 +46,22 @@ ctrls.crearUserConditions = async (req, res) => {
       otherAllergicText,
       medicationText,
       surgeryText,
+      name
     });
 
     await user.save();
     res.json({ mensaje: 'Se registro correctamente.' });
   } catch (error) {
-    console.log(error);
+    res.status(500).json({ mensaje: 'Valores Incorrectos.' });
   }
 };
 
 ctrls.getUserConditions = async (req, res) => {
   try {
-    const userConditions = await UserConditions.find();
-    res.json(userConditions);
+    const userConditions = await UserConditions.findOne({ 'name': req.params.name });
+    userConditions ? res.json(userConditions) : res.status(404).json({ mensaje: 'Not exit.' })
   } catch (error) {
-    console.log(error);
+    res.status(500).json({ mensaje: 'Error.' });
   }
 };
 
