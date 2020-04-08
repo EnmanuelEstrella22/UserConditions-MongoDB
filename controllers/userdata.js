@@ -15,7 +15,7 @@ ctrls.crearUserData = async (req, res) => {
       civil_state,
       emergencyContactName,
       emergencyContactPhone,
-      emergencyContact_relationShip,
+      emergencyContact_relationship,
       height,
       weight,
     } = req.body;
@@ -30,7 +30,7 @@ ctrls.crearUserData = async (req, res) => {
       civil_state,
       emergencyContactName,
       emergencyContactPhone,
-      emergencyContact_relationShip,
+      emergencyContact_relationship,
       height,
       weight,
     });

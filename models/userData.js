@@ -4,7 +4,7 @@ const userData = new Schema(
   {
     name: { type: String, required: true },
     gender:{type: String, required: true},
-    dateOfBirth: { type: Date, required: true },
+    dateOfBirth: { type: String, required: true },
     cedulaNumber: { type: String, required: true },
     address: { type: String, required: true },
     cellPhone: { type: String, required: true },
