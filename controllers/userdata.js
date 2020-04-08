@@ -36,12 +36,14 @@ ctrls.crearUserData = async (req, res) => {
   }
 };
 
+
 ctrls.getUserData = async (req, res) => {
   try {
-    const userData = await UserData.find();
+    const userData = await UserData.findOne({ 'name': req.params.name });
+    userData ? res.json(userData) : res.status(404).json({ mensaje: 'Not exit.' })
     res.json(userData);
   } catch (error) {
-    console.log(error);
+    res.status(500).json({ mensaje: 'Error.' });
   }
 };
 

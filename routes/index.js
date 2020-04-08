@@ -10,7 +10,7 @@ module.exports = app => {
 
   //User general data
   router.post('/api/post/user_data', ctrUserData.crearUserData);
-  router.get('/api/get/user_data', ctrUserData.getUserData);
+  router.get('/api/get/user_data/:name', ctrUserData.getUserData);
 
   app.use(router);
 };

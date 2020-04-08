@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose
   .connect(
-    'mongodb+srv://AdminDB:welc0me1@clustertesting0-ztrac.azure.mongodb.net/test?retryWrites=true&w=majority',
+    'mongodb://AdminDB:welc0me1@clustertesting0-shard-00-00-ztrac.azure.mongodb.net:27017,clustertesting0-shard-00-01-ztrac.azure.mongodb.net:27017,clustertesting0-shard-00-02-ztrac.azure.mongodb.net:27017/test?ssl=true&replicaSet=ClusterTesting0-shard-0&authSource=admin&retryWrites=true&w=majority',
     {
       useCreateIndex: true,
       useNewUrlParser: true,
