@@ -7,24 +7,30 @@ ctrls.crearUserData = async (req, res) => {
   try {
     const {
       name,
+      gender,
       dateOfBirth,
       cedulaNumber,
       address,
       cellPhone,
+      civil_state,
       emergencyContactName,
       emergencyContactPhone,
+      emergencyContact_relationShip,
       height,
       weight,
     } = req.body;
 
     const user_data = new UserData({
       name,
+      gender,
       dateOfBirth,
       cedulaNumber,
       address,
       cellPhone,
+      civil_state,
       emergencyContactName,
       emergencyContactPhone,
+      emergencyContact_relationShip,
       height,
       weight,
     });
